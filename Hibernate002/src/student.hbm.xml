@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>  
+    <class name="com.wangxiao.student" table="student">  
+        <id name="sid">  
+            <generator class="native"/>  
+        </id>  
+        <property name="sname"/>  
+        <property name="sex"/>  
+        <property name="birthday"/>  
+        <property name="address"/>  
+        <many-to-one name="teachers" class="com.wangxiao.teachers">
+              <column name="tId"/>
+        </many-to-one>
+
+    </class>  
+</hibernate-mapping>
